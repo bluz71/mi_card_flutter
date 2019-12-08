@@ -11,88 +11,83 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-            child: Column(
-          children: <Widget>[
-            CircleAvatar(
-              radius: 50.0,
-              backgroundColor: Colors.white,
-              backgroundImage: AssetImage('images/beggar.png'),
-            ),
-            Text(
-              'Joe Bloggs',
-              style: TextStyle(
-                fontFamily: 'Pacifico',
-                color: Colors.white,
-                fontSize: 40.0,
-                fontWeight: FontWeight.bold,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundColor: Colors.white,
+                backgroundImage: AssetImage('images/beggar.png'),
               ),
-            ),
-            Text(
-              'FLUTTER DEVELOPER',
-              style: TextStyle(
-                fontFamily: 'Source Sans Pro',
-                color: Colors.teal.shade100,
-                fontSize: 20.0,
-                letterSpacing: 2.5,
-                fontWeight: FontWeight.bold,
+              Text(
+                'Joe Bloggs',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  color: Colors.white,
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            Container(
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(
-                vertical: 10.0,
-                horizontal: 25.0,
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  color: Colors.teal.shade100,
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              padding: EdgeInsets.all(10.0),
-              child: Row(
-                children: <Widget>[
-                  Icon(
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
                     Icons.phone,
                     color: Colors.teal,
                   ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(
+                  title: Text(
                     '+61 499 934 955',
                     style: TextStyle(
                       color: Colors.teal.shade900,
                       fontFamily: 'Source Sans Pro',
                       fontSize: 20.0,
                     ),
-                  )
-                ],
+                  ),
+                ),
               ),
-            ),
-            Container(
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(
-                vertical: 10.0,
-                horizontal: 25.0,
-              ),
-              padding: EdgeInsets.all(10.0),
-              child: Row(
-                children: <Widget>[
-                  Icon(
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
                     Icons.email,
                     color: Colors.teal,
                   ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(
+                  title: Text(
                     'joebloggs@example.com',
                     style: TextStyle(
                       color: Colors.teal.shade900,
                       fontFamily: 'Source Sans Pro',
                       fontSize: 20.0,
                     ),
-                  )
-                ],
+                  ),
+                ),
               ),
-            ),
-          ],
-        )),
+            ],
+          ),
+        ),
       ),
     );
   }
